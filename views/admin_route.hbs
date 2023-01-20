@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="https://psv4.userapi.com/c235031/u214632314/docs/d44/b154fd2f71a1/photo-removebg-preview.png?extra=z-SED2pnPjPf4NdUHZKBjiXlMlGZSfKoxpmkwVz_0xOMUy78X8vd_EjqOKSyXbkSLE6N3nuEMg_65mJH_I2DnUIyYGjFjg9HYlAaQcONgGr0Q6jeGPl1yypSPzqDBBiitKITwc4R5OwEnKhczJXtd-ZK">
+  <title>Transport monitoring</title>
+  <style>
+    html {
+      background-image: url(https://sun9-east.userapi.com/sun9-32/s/v1/ig2/aOGRrn8vToVzZqRqV2u5tveD2Kj-WHOFyTL9a-eAGSxL3-u-kaHss8b_S0KpJqMdU0TsmwDcWuSIaM6iqLNSY_gC.jpg?size=2560x1600&quality=95&type=album);
+    }
+
+    .page-light {
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16pt;
+    }
+
+    .wrapper {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav {
+      display: flex;
+      list-style-type: none;
+      padding-left: 80%;
+    }
+
+    .logo {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 26pt;
+      color: #028BFF;
+    }
+
+    .nav-item {
+      margin-left: 52px;
+      margin-right: 52px;
+    }
+
+    .nav-link {
+      color: #FEC20A;
+      font-size: 24pt;
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    .back-btn{
+            text-decoration: none;
+            color: #212121;
+            font-size: 20px;
+        }
+
+    .route-button {
+      padding: 0;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border: none;
+      margin-bottom: 20px;
+      border-collapse: separate;
+    }
+
+    table thead th {
+      font-weight: bold;
+      text-align: left;
+      border: none;
+      padding: 10px 15px;
+      background: #EDEDED;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-top: 1px solid #ddd;
+    }
+
+    table tr th:first-child,
+    table tr td:first-child {
+      border-left: 1px solid #ddd;
+    }
+
+    table tr th:last-child,
+    table tr td:last-child {
+      border-right: 1px solid #ddd;
+    }
+
+    table thead tr th:first-child {
+      border-radius: 20px 0 0 0;
+    }
+
+    table thead tr th:last-child {
+      border-radius: 0 20px 0 0;
+    }
+
+    table tbody td {
+      text-align: left;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      font-size: 26px;
+      vertical-align: top;
+    }
+
+    table tbody tr:nth-child(even) {
+      background: #F8F8F8;
+    }
+
+    table tbody tr:last-child td {
+      border: 1px solid #ddd;
+    }
+
+    table tbody tr:last-child td:first-child {
+      border-radius: 0 0 0 20px;
+    }
+
+    table tbody tr:last-child td:last-child {
+      border-radius: 0 0 20px 0;
+    }
+
+    .edit-btn,
+    .create-btn,
+    .delete-btn {
+      font-size: 20px;
+      background: #eee;
+      color: #088;
+      text-decoration: none;
+      width: 90px;
+      text-align: center;
+      margin: 10px auto;
+      padding: 5px 5px;
+      transition: all 0.3s;
+      border: 0px;
+    }
+
+    .edit-btn, .delete-btn {
+      display: block;
+    }
+
+    .edit-btn:hover,
+    .create-btn:hover,
+    .delete-btn:hover {
+      box-shadow: 0px -5px 0 #088 inset;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page page-light">
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo"><img
+            src="https://psv4.userapi.com/c235031/u214632314/docs/d22/4ae2d8b54430/512x512bb-removebg-preview.png?extra=nEKaHLpbLSn_kGGZTeZ31i_nodaN-1ltA-N7M9orLGMWt4XCHe2wHLge_gXkPSJl7PmRxxs74lpGcEm1w9SEgB-WJ8TF08vb-IWYnaBolrf5v2F2SmqVJV8PrtOVyEAbmxFuGz7b66c1qrhHaPMCoxzD"
+            width="160" height="160" alt="Logo"></div>
+      </header>
+      <hr>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1 align="center" color="#ffb3db">Редактирование маршрутов</h1>
+    <p><a class="back-btn" href="/admin">К редактированию расписанию</a></p>
+    <p><a class="create-btn" href="/create_route">Добавить</a></p>
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Номер маршрута</th>
+          <th>Город</th>
+          <th>Время пути (часов)</th>
+          <th></th>
+        </tr>
+      </thead>
+      {{#each route}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.number}}</td>
+        <td>{{this.city}}</td>
+        <td>{{this.travel_time}}</td>
+        <td>
+          <a class="edit-btn" href="/edit_route/{{this.id}}">Изменить</a>
+          <form action="delete_route/{{this.id}}" method="POST">
+            <input class="delete-btn" type="submit" value="Удалить" />
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+
+  <div class="page-dark">
+    <div class="wrapper">
+      <footer class="footer">
+        <div class="footer-nav">
+
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

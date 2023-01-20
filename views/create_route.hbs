@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon"
+        href="https://psv4.userapi.com/c235031/u214632314/docs/d44/b154fd2f71a1/photo-removebg-preview.png?extra=z-SED2pnPjPf4NdUHZKBjiXlMlGZSfKoxpmkwVz_0xOMUy78X8vd_EjqOKSyXbkSLE6N3nuEMg_65mJH_I2DnUIyYGjFjg9HYlAaQcONgGr0Q6jeGPl1yypSPzqDBBiitKITwc4R5OwEnKhczJXtd-ZK">
+    <title>Transport monitoring</title>
+    <meta charset="utf-8" />
+    <script>
+        $.mask.definitions['H'] = "[0-1]";
+        $.mask.definitions['h'] = "[0-9]";
+        $.mask.definitions['M'] = "[0-5]";
+        $.mask.definitions['m'] = "[0-9]";
+        $.mask.definitions['P'] = "[AaPp]";
+        $.mask.definitions['p'] = "[Mm]";
+
+        $(".timepicker").mask("Hh:Mm Pp");
+    </script>
+    <style>
+        .time-container{
+            width: 180px;
+        }
+        .field {
+            width: 180px;
+            background-color: azure;
+        }
+
+        .create-btn {
+            background-color: #cafaf2;
+            border-radius: 6px;
+            border: 2px;
+            border-color: azure;
+            font-size: 18px;
+            color: #212121;
+            text-decoration: none;
+            padding: 8px 30px;
+            margin-left: 15px;
+        }
+
+        .create-btn:hover {
+            background-color: #ffb3db;
+            cursor: pointer;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: #212121;
+        }
+
+        html {
+            background-image: url(https://sun9-east.userapi.com/sun9-32/s/v1/ig2/aOGRrn8vToVzZqRqV2u5tveD2Kj-WHOFyTL9a-eAGSxL3-u-kaHss8b_S0KpJqMdU0TsmwDcWuSIaM6iqLNSY_gC.jpg?size=2560x1600&quality=95&type=album);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Добавление маршрута</h1>
+    <form method="POST">
+        <label>Номер маршрута</label><br>
+        <input name="number" class="field" /><br><br>
+        <label>Город</label><br>
+        <input name="city" class="field" /><br><br>
+        <label>Время пути</label><br>
+        <div class="time-container">
+            <input name="travel_time" class="timepicker" width="180px" type="time" placeholder="hh:mm" />
+        </div>
+        <br>
+        <input class="create-btn" type="submit" value="Отправить" />
+    </form>
+    <br>
+    <a class="back-btn" href="/admin_route">Вернуться к расписанию</a>
+</body>
+<html>

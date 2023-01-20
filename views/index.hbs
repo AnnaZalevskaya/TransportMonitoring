@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="https://psv4.userapi.com/c235031/u214632314/docs/d44/b154fd2f71a1/photo-removebg-preview.png?extra=z-SED2pnPjPf4NdUHZKBjiXlMlGZSfKoxpmkwVz_0xOMUy78X8vd_EjqOKSyXbkSLE6N3nuEMg_65mJH_I2DnUIyYGjFjg9HYlAaQcONgGr0Q6jeGPl1yypSPzqDBBiitKITwc4R5OwEnKhczJXtd-ZK">
+  <title>Transport monitoring</title>
+  <style>
+    html {
+      background-image: url(https://sun9-east.userapi.com/sun9-32/s/v1/ig2/aOGRrn8vToVzZqRqV2u5tveD2Kj-WHOFyTL9a-eAGSxL3-u-kaHss8b_S0KpJqMdU0TsmwDcWuSIaM6iqLNSY_gC.jpg?size=2560x1600&quality=95&type=album);
+    }
+    a {
+      text-decoration: none;
+    }
+    .page-light {
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16pt;
+    }
+
+    .wrapper {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav {
+      display: flex;
+      list-style-type: none;
+      padding-left: 80%;
+    }
+
+    .logo {
+      justify-content: center;
+    }
+    h1{
+      font-size: 40pt;
+      color: #028BFF;
+    }
+    .nav-item {
+      margin-left: 52px;
+      margin-right: 52px;
+    }
+
+    .nav-link {
+      color: #FEC20A;
+      font-size: 46pt;
+      list-style-type: none;
+    }
+
+    .route-button {
+
+      padding: 0px;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: none;
+      cursor: pointer;
+    }
+
+    .admin-button {
+      text-decoration: none;
+      display: inline-block;
+      padding: 6px 20px;
+      margin: 5px 10px;
+      border-radius: 30px;
+      background-position: 100% 0;
+      background-size: 120% 120%;
+      background: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18pt;
+      font-weight: 300;
+      color: white;
+      box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+      transition: .5s;
+    }
+
+    .admin-button:hover {
+      box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+      background-position: 0 0;
+    }
+    .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+</head>
+
+<body>
+  <div class="page page-light">
+    <div class="wrapper">
+      <ul class="nav">
+        <li><button class="admin-button" onclick="window.location.href='/auth'">Администрирование</button></li>
+      </ul>
+      <header class="header">
+        <div class="logo"><img
+            src="https://psv4.userapi.com/c235031/u214632314/docs/d22/4ae2d8b54430/512x512bb-removebg-preview.png?extra=nEKaHLpbLSn_kGGZTeZ31i_nodaN-1ltA-N7M9orLGMWt4XCHe2wHLge_gXkPSJl7PmRxxs74lpGcEm1w9SEgB-WJ8TF08vb-IWYnaBolrf5v2F2SmqVJV8PrtOVyEAbmxFuGz7b66c1qrhHaPMCoxzD"
+            width="160" height="160" alt="Logo"></div>
+
+      </header>
+      <hr>
+    </div>
+  </div>
+  <div class="main">
+    <h1>Маршруты</h1>
+    <table width="100%">
+      <td>
+    <ul id="nav" class="nav-link">
+      {{#each transports}}
+      <li>
+        <a class="route-button" href="/route/{{this.number}}">{{this.number}}</a>   
+      </li>
+      {{/each}}
+    </ul>
+      </td>
+      <td width="60%">
+        <img 
+        src="https://psv4.userapi.com/c235031/u214632314/docs/d56/45306a7c912c/1651050751_276302.jpg?extra=kgUq90IscfhHLLLfifGx-SOF34yocfEuCDU5p2wZaKXR4GtYvzbXophYGaXkkvqMpdeoywe1_XO7p0GK2-tSvq7Qrz0qPfPWO3mIlJLZiEyz1KxpmJoWeHarr6yKDTrQWKKwp0P8Q05uShrFwlz-hqk"
+        width="900px" height="500px">
+      </td>
+    </table>
+  </div>
+
+  <div class="page-dark">
+    <div class="wrapper">
+      <footer class="footer">
+        <div class="footer-nav">
+
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
